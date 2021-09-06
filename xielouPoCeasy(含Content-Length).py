@@ -12,8 +12,4 @@ for web in webs:
     print("url为:" + u + ' ' + "状态为:%d"%response.status_code + ' ' + "content-length为:" + str(len(response.content)))
     time.sleep(5)       #想睡多久看自己~
 w = open('easyresult.txt', 'w+')
-for web in webs:
-    web = web.strip()
-    u = url + web
-    response = requests.get(u)
-    w.write("url为:" + u + ' ' + "状态为:%d"%response.status_code + ' ' + "content-length为:" + str(len(response.content)) + '\n')
+w.write("url为:" + u + ' ' + "状态为:%d"%response.status_code + ' ' + "content-length为:" + str(len(response.content)) + '\n')
